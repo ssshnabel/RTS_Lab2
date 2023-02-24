@@ -1,12 +1,18 @@
-all: lab2
+all: lab3
 
-lab2: lab2.o
-	gcc lab2.o -o lab2
+lab3: lab3.o libflow.so
+  gcc -o lab3 lab3.o -L. lflow
 
-lab2.o: lab2.c
-	gcc -c lab2.c
+lab3.o: lab3.c
+  gcc -c lab3.c
+
+libflow.so: flow.o
+  gcc -shared -o libflow.so flow.o
+
+flow.o: flow.c
+  gcc -c -fPIC flow.c
 
 DEBUG: -g
 
 clean:
-	rm *.out
+  rm -f*.o *.so lab3
