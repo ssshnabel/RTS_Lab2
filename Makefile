@@ -1,12 +1,13 @@
 all: lab2
 
 lab2: lab2.o
-	gcc lab2.o -o lab2
+		gcc lab2.o -o lab2
 
 lab2.o: lab2.c
-	gcc -c lab2.c
+		gcc -c lab2.c
 
-DEBUG: -g
+debug: all
+		make --debug
 
 clean:
-	rm *.out
+	rm *.o lab2
