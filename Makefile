@@ -1,7 +1,7 @@
 all: lab3
 
 lab3: lab3.o libflow.so
-  	gcc -o lab3 lab3.o -L. lflow
+  	gcc -o lab3 lab3.o -L.lflow
 
 lab3.o: lab3.c
   	gcc -c lab3.c
