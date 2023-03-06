@@ -13,7 +13,7 @@ flow.o: flow.c
   	gcc -c -fPIC flow.c
 
 debug: all
-		make --debug
+	make --debug
 
 clean:
   	rm -f*.o *.so lab3
