@@ -8,7 +8,7 @@ pthread_t thread_id2;
 int counter=0;
 pthread_mutex_t mutex;
 
-void *long_thread (void *notused)
+void *long_thread1(void *notused)
 {
   int n;
   for(n=0; n<5; n++)
